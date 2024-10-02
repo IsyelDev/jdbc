@@ -8,22 +8,18 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public abstract class App2 {
-
+// Video de Egg
     public static void main(String[] args) {
         Connection conn = getConnection();
-        try {
-        } finally {
             desconectarDataBase(conn);
-        }
-
+    
     }
 
     private static final String URL = "jdbc:mysql://localhost:3306/vivero"; // Cambia "mi_base_de_datos" por el nombre de tu base de datos
-    private static final String USER = "xxxx"; // Cambia "tu_usuario" por tu nombre de usuario
-    private static final String PASSWORD = "xxxx"; // Cambia "tu_contrasena" por tu contraseña
+    private static final String USER = "tu_usuario"; // Cambia "tu_usuario" por tu nombre de usuario
+    private static final String PASSWORD = "tu_contrasena"; // Cambia "tu_contrasena" por tu contraseña
 
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver"; // Cambia el driver si es necesario
-    private static final String ZONA = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 
     protected static Connection conexion = null;
     protected static ResultSet resultSet = null;
