@@ -16,8 +16,8 @@ public class App {
 
     // URL de conexión a la base de datos
     public static String url = "jdbc:mysql://localhost:3306/vivero"; // Cambia "mi_base_de_datos" por el nombre de tu base de datos
-    public static String usuario = "root"; // Cambia "tu_usuario" por tu nombre de usuario
-    public static String contrasena = "MANUELDELAPAZTTITO"; // Cambia "tu_contrasena" por tu contraseña
+    public static String usuario = "xxxx"; // Cambia "tu_usuario" por tu nombre de usuario
+    public static String contrasena = "xxxxx"; // Cambia "tu_contrasena" por tu contraseña
 
     public static Connection conexion = null;
     public static PreparedStatement preparedStatement = null;
