@@ -42,10 +42,11 @@ public class App {
 
             // Paso 4: Procesar los resultados
             while (resultSet.next()) {
-                int id = resultSet.getInt("id_cliente");
+                int id_cliente = resultSet.getInt("id_cliente");
                 String nombre = resultSet.getString("nombre_cliente");
                 String ciudades = resultSet.getString("ciudad");
-                System.out.println("ID: " + id + ", Nombre: " + nombre + ", Ciudad donde vive: " + ciudad);
+                String pais = resultSet.getString("pais");
+                System.out.println( " | " + "ID: " + id_cliente + " | " + " Nombre: " + nombre + " | " + "Pais donde vive: " + pais + " | " + "CIUDAD: " + ciudades);
             }
         } catch (SQLException e) {
             System.err.println("Error de SQL: " + e.getMessage());
