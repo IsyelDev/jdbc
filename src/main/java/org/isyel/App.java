@@ -15,9 +15,9 @@ public class App {
     }
 
     // URL de conexión a la base de datos
-    public static String url = "jdbc:mysql://localhost:3306/vivero"; // Cambia "mi_base_de_datos" por el nombre de tu base de datos
-    public static String usuario = "xxxx"; // Cambia "tu_usuario" por tu nombre de usuario
-    public static String contrasena = "xxxxx"; // Cambia "tu_contrasena" por tu contraseña
+    public static String url = "jdbc:mysql://localhost:3306/vivero";
+    public static String usuario = "tu_usuario"; // Cambia "tu_usuario" por tu nombre de usuario
+    public static String contrasena = "tu_contrasena"; // Cambia "tu_contrasena" por tu contraseña
 
     public static Connection conexion = null;
     public static PreparedStatement preparedStatement = null;
@@ -35,17 +35,17 @@ public class App {
             preparedStatement = conexion.prepareStatement(sql);
 
             String ciudad = "Madrid";
-            preparedStatement.setString(1, "%" + ciudad + "%"); // Establece el valor del parámetro (edad > 18)
+            preparedStatement.setString(1, "%" + ciudad + "%"); // Establece el valor del parámetro (ciudad like %Madrid%)
 
             // Paso 3: Ejecutar la consulta
             resultSet = preparedStatement.executeQuery();
 
             // Paso 4: Procesar los resultados
             while (resultSet.next()) {
-                int id_cliente = resultSet.getInt("id_cliente");
+                int id = resultSet.getInt("id_cliente");
                 String nombre = resultSet.getString("nombre_cliente");
                 String ciudades = resultSet.getString("ciudad");
-                System.out.println("ID: " + id_cliente + ", Nombre: " + nombre + ", Ciudades: " + ciudad);
+                System.out.println("ID: " + id + ", Nombre: " + nombre + ", Ciudad donde vive: " + ciudad);
             }
         } catch (SQLException e) {
             System.err.println("Error de SQL: " + e.getMessage());
