@@ -19,8 +19,8 @@ public abstract class App2 {
     }
 
     private static final String URL = "jdbc:mysql://localhost:3306/vivero"; // Cambia "mi_base_de_datos" por el nombre de tu base de datos
-    private static final String USER = "root"; // Cambia "tu_usuario" por tu nombre de usuario
-    private static final String PASSWORD = "MANUELDELAPAZTTITO"; // Cambia "tu_contrasena" por tu contraseña
+    private static final String USER = "xxxx"; // Cambia "tu_usuario" por tu nombre de usuario
+    private static final String PASSWORD = "xxxx"; // Cambia "tu_contrasena" por tu contraseña
 
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver"; // Cambia el driver si es necesario
     private static final String ZONA = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
